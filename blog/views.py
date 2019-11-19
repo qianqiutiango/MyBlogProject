@@ -3,6 +3,7 @@ from django.core.paginator import Paginator
 from .models import Post,Category,Tag
 import markdown
 import re
+
 def index(request):
     # -created_time表示逆序，不加-则表示正序
     posts = Post.objects.all().order_by('-created_time')
